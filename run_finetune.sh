@@ -1,0 +1,25 @@
+WANDB_DISABLED=true CUDA_VISIBLE_DEVICES=4,5,6,7 torchrun --rdzv_endpoint=0.0.0.0:29400 --nproc_per_node=4 ./run_finetune.py \
+  --model_name_or_path cis-lmu/glot500-base \
+  --tokenizer_name cis-lmu/glot500-base \
+  --output_dir /mounts/data/proj/ayyoobbig/transliteration_modeling/trained_models/model \
+  --cache_dir /mounts/data/proj/ayyoobbig/transliteration_modeling/cache \
+  --per_device_train_batch_size 24 \
+  --gradient_accumulation_steps 8 \
+  --fp16 True \
+  --do_train \
+  --num_train_epochs 2 \
+  --save_steps 2000 \
+  --ddp_timeout 259200 \
+  --preprocessing_num_workers 8 \
+  --transliteration_train_file /mounts/data/proj/chunlan/Glot500_c/transliteration_data/five_percent/pretrain_data/text_transliterations_with_latn.csv \
+  --transliteration_loss TCM \
+  --contrast_layer 8 \
+  --train_cls False \
+  --logging_steps 100 \
+  --learning_rate 2e-5 \
+  --ddp_find_unused_parameters False \
+  --remove_unused_columns False \
+  --tcm_loss_weight 0.5 \
+  --use_contrastive True \
+  --use_lm True
+  # --gradient_checkpointing True
