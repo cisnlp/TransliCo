@@ -58,7 +58,7 @@ bash run_finetune.sh
 
 ## Model Loading
 
-We release **Furina** and **Furina<sub>Indic</sub>** on Huggingface, you can download [Furina](https://huggingface.co/yihongLiu/) and [Furina<sub>indic</sub>](https://huggingface.co/yihongLiu/).
+We release **Furina** and **Furina<sub>Indic</sub>** on Huggingface, you can download [Furina](https://huggingface.co/yihongLiu/furina) and [Furina<sub>indic</sub>](https://huggingface.co/yihongLiu/furina-indic).
 
 
 To use **Furina** and **Furina<sub>indic</sub>**, you could simply load it through pipeline:
