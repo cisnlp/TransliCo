@@ -2,7 +2,7 @@
 
 This is the repository for ***TransliCo*** framework, which aims to fine-tune an mPLM by contrasting sentences in its training data and their transliterations in a unified script (**Latn**, in our case). The framework therefore aligns sentences in their original scripts with their transliterations, which ensures uniformity in the representation space for different scripts. We use [Glot500](https://github.com/cisnlp/Glot500), a PLM pretrained on over 500 languages, as our source model, and find-tune it on a small portion (5%) of its training data: Glot500-c. The resulting model is referred to as **Furina**. This repo is based on [Glot500](https://github.com/cisnlp/Glot500) and [OFA](https://github.com/cisnlp/ofa).
 
-Paper on arXiv: 
+Paper on arXiv: https://arxiv.org/abs/2401.06620
 
 ```
 .
@@ -145,7 +145,12 @@ bash evaluate_all_pos.sh
 If you find our code, models, or data useful for your research, please considering citing:
 
 ```
-
+@article{liu2024translico,
+  title={TransliCo: A Contrastive Learning Framework to Address the Script Barrier in Multilingual Pretrained Language Models},
+  author={Yihong Liu and Chunlan Ma and Haotian Ye and Hinrich Sch{\"u}tze},
+  journal={arXiv preprint arXiv:2401.06620},
+  year={2024}
+}
 ```
 
 or
